@@ -1,0 +1,10 @@
+a=6000;
+b=5000;
+x=[2200 2900];
+y=[3600 3300];
+z=b*sqrt(1-(x.*x+y.*y)/(a*a));
+vA=[x(1) y(1) z(1)];
+vB=[x(2) y(2) z(2)];
+beta=acos(vA*vB'/(norm(vA)*norm(vB)));
+len_min=min(norm(vA),norm(vB))*beta
+len_max=max(norm(vA),norm(vB))*beta
